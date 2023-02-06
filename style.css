@@ -69,6 +69,8 @@ svg {
   }
 }
 
+/* ------------------------------------ */
+
 /* Body */
 
 body {
@@ -77,7 +79,6 @@ body {
   place-items: start;
   color: var(--color-neon);
   font-family: "Balsamiq Sans", cursive;
-  padding: 3rem 0 0 3rem;
   background-image: linear-gradient(to bottom right, var(--color-background-light) ,var(--color-background-dark) 80%);
   background-size: 300%;
   animation: bg-aniation 10s infinite alternate;
@@ -92,23 +93,21 @@ body {
   }   
 }
 
-/* Header */
+/* Header --------------------------*/
 
-    /*Logo*/
+    /*Logo ----------*/
 
-.neon-button {
+#nav-title {
   font-size: 2rem;
   display: inline-block;
   cursor: pointer;
   text-decoration: none;
-  padding: 1em;
-  position: relative;
   color: var(--color-neon);
   text-shadow: 0 0 1em var(--color-neon), 0 0 1.5em var(--color-neon), 0 0 0.5em var(--color-light-neon);
   
 }
 
-.neon-button:hover {
+#nav-title:hover {
   animation: btn-spin 0.75s linear;
 }
 
@@ -124,13 +123,114 @@ body {
   }
 }
 
-    /*Nav*/
+    /*Nav -----------------------*/
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 3rem;
-
+#nav-title {
+  position: fixed;
+  padding: 1.5em;
 }
 
+.primary-header {
+  position: fixed;
+}
+
+#primary-navigation {
+  text-align: center;
+  width: 100vw;
+}
+
+header ul {
+  padding-top: 2em;
+}
+
+header li {
+  list-style: none;
+  display: inline-block;
+  padding: 0 1em;
+  text-decoration: underline var(--color-neon);
+}
+
+header a {
+  text-decoration: none;
+  color: #555;
+  transition: all 0.3s ease 0s;
+}
+
+header a:hover {
+  color: #b2dfdb;
+}
+
+/* Media Queries */
+
+@media (min-width: 660px) and (max-width: 1024px) {
+  #nav-title {
+    position: fixed;
+    padding: 1.5em;
+  }
+  
+  .primary-header {
+    position: fixed;
+  }
+  
+  #primary-navigation {
+    text-align: right;
+    width: 100vw;
+  }
+  
+  header ul {
+    padding-top: 2em;
+  }
+  
+  header li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 1em;
+    text-decoration: underline var(--color-neon);
+  }
+  
+  header a {
+    text-decoration: none;
+    color: #555;
+    transition: all 0.3s ease 0s;
+  }
+  
+  header a:hover {
+    color: #b2dfdb;
+  }
+}
+
+@media (max-width: 659px) {
+  #nav-title {
+    display: none;
+  }
+  
+  .primary-header {
+    position: fixed;
+  }
+  
+  #primary-navigation {
+    text-align: center;
+    width: 100vw;
+  }
+  
+  header ul {
+    padding-top: 2em;
+  }
+  
+  header li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 1em;
+    text-decoration: underline var(--color-neon);
+  }
+  
+  header a {
+    text-decoration: none;
+    color: #555;
+    transition: all 0.3s ease 0s;
+  }
+  
+  header a:hover {
+    color: #b2dfdb;
+  }
+}
