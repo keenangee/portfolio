@@ -1,97 +1,64 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  --color-neon: rgb(28, 27, 27);
+  --color-light-neon: rgb(70, 67, 67);
+  --color-background-dark: rgb(163, 239, 235);
+  --color-background-light:rgb(245, 134, 251);
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
   min-height: 100vh;
+  display: grid;
+  place-items: start;
+  color: var(--color-neon);
+  font-family: "Balsamiq Sans", cursive;
+  padding: 3rem 0 0 3rem;
+  background-image: linear-gradient(to bottom right, var(--color-background-light) ,var(--color-background-dark) 80%);
+  background-size: 300%;
+  animation: bg-aniation 10s infinite alternate;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+@keyframes bg-aniation {
+  0% {
+      background-position: left;
+  }
+  100% {
+      background-position: right;
+  }   
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
+.neon-button {
+  font-size: 2rem;
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  display: inline-block;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  text-decoration: none;
+  padding: 1em;
+  position: relative;
+  color: var(--color-neon);
+  text-shadow: 0 0 1em var(--color-neon), 0 0 1.5em var(--color-neon), 0 0 0.5em var(--color-light-neon);
+  
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.neon-button:hover {
+  animation: btn-spin 0.75s linear;
+}
+
+@keyframes btn-spin {
+  0%{
+      transform: rotate(0deg) scale(1);
   }
-  a:hover {
-    color: #747bff;
+  50%{
+      transform: rotate(180deg) scale(0.25);
   }
-  button {
-    background-color: #f9f9f9;
+  100%{
+      transform: rotate(360deg) scale(1);
   }
 }
+
+
+
