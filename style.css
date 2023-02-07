@@ -139,6 +139,10 @@ body {
   width: 100vw;
 }
 
+#mobile-option {
+  display: none;
+}
+
 header ul {
   padding-top: 2em;
 }
@@ -176,6 +180,10 @@ header a:hover {
     text-align: right;
     width: 100vw;
   }
+
+  #mobile-option {
+    display: none;
+  }
   
   header ul {
     padding-top: 2em;
@@ -211,6 +219,10 @@ header a:hover {
   #primary-navigation {
     text-align: center;
     width: 100vw;
+  }
+
+  #mobile-option {
+    display: inline;
   }
   
   header ul {
