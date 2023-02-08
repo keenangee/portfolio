@@ -80,6 +80,7 @@ body {
   color: var(--color-neon);
   font-family: "Balsamiq Sans", cursive;
   background-image: linear-gradient(to bottom right, var(--color-background-light) ,var(--color-background-dark) 80%);
+  background-attachment: fixed;
   background-size: 300%;
   animation: bg-aniation 10s infinite alternate;
 }
@@ -95,7 +96,7 @@ body {
 
 /* Header --------------------------*/
 
-    /*Logo ----------*/
+    /*Logo*/
 
 #nav-title {
   font-size: 2rem;
@@ -123,7 +124,7 @@ body {
   }
 }
 
-    /*Nav -----------------------*/
+    /*Nav*/
 
 #nav-title {
   position: fixed;
@@ -164,7 +165,7 @@ header a:hover {
   color: #b2dfdb;
 }
 
-/* Media Queries */
+    /* Media Queries */
 
 @media (min-width: 660px) and (max-width: 1024px) {
   #nav-title {
@@ -246,3 +247,55 @@ header a:hover {
     color: #b2dfdb;
   }
 }
+
+/* Body ------------------------------------ */
+
+.main-title {
+  font-size: 1.5rem;
+  text-align: left;
+  margin: 0 auto;
+  max-width: 75vw;
+}
+
+.red-link, .red-link:visited {
+  color: red;
+  background-image: linear-gradient(90deg, black, red 45%);
+  background-size: 0% 3px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  transition: background-size 0.5s ease;
+}
+
+.red-link:hover {
+  background-size: 100% 3px;
+}
+
+/* Article */
+
+
+article {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+
+  margin: auto;
+  min-width: 75vw;
+}
+
+#about-me {
+  max-width: 40vw;
+}
+
+#aka {
+  padding-top: 1em;
+}
+
+#portrait {
+  max-width: 12em;
+  padding-top: 1.5em;
+}
+
+

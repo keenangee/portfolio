@@ -4,26 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <title>Portfolio</title>
   </head>
 
 
   <body>
-    <script type="module" src="/main.js"></script>
+    <!-- <script type="module" src="/main.js"></script> -->
 
     <header class="primary-header">
 
-        <a href="#" id="nav-title">Keenan Gee</a>
+        <a href="index.html" id="nav-title">Keenan Gee</a>
 
         <nav id="primary-navigation">
           <ul role="list" class="nav-links">
             <li id="mobile-option"><a href="#">About</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Games</a></li>
+            <li><a href="/projects.html">Projects</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/games.html">Games</a></li>
           </ul>
         </nav>
 
@@ -31,7 +31,25 @@
 
     </header>
 
+    <article class="primary-article">
+
+      <div class="primary-article-content">
+        <header>
+          <h1 class="main-title">Keenan Gee</h1>
+          <p id="aka">Future full stack <a class="red-link" href="https://en.wikipedia.org/wiki/Web_developer" target="_blank">Web Developer</a></p>
+        </header>
+        <div class="primary-article-image">
+          <img id="portrait" src="/images/saitama.jpeg" alt="Keenan Gee">
+        </div>
+      </div>
+
+      <p id="about-me">I am a highly motivated individual with a passion for technology and web development. I am in the process of becoming a full stack web developer, with a solid understanding of HTML, CSS and Javascript. I am constantly seeking new challenges and opportunities to improve my skills and deepen my knowledge in the field. With my strong work ethic and attention to detail, I am confident in my ability to produce high-quality and user-friendly web applications.</p>
+
 
     <div id="app"></div>
+
+    <footer class="primary-footer">
+      <p>© 2021 Keenan Gee</p>
+    </footer>
   </body>
 </html>
